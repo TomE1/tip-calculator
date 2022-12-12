@@ -56,22 +56,22 @@ html {a
 
   /* Rainbow borders */
 
-  --borderViolet: 3px solid #9400d3;
-  --borderIndigo: 3px solid #4b0082;
-  --borderBlue: 3px solid #0000ff;
-  --borderGreen: 3px solid #00ff00;
-  --borderYellow: 3px solid #ffff00;
-  --borderOrange: 3px solid #ff7f00;
-  --borderRed: 3px solid #ff0000;
+  --borderViolet: 1px solid #9400d3;
+  --borderIndigo: 1px solid #4b0082;
+  --borderBlue: 1px solid #0000ff;
+  --borderGreen: 1px solid #00ff00;
+  --borderYellow: 1px solid #ffff00;
+  --borderOrange: 1px solid #ff7f00;
+  --borderRed: 1px solid #ff0000;
 
   /* Other borders */
-  --borderBrown: 3px solid brown;
-  --borderBisque: 3px solid bisque;
-  --borderKhaki: 3px solid khaki;
-  --borderGray: 3px solid gray;
+  --borderBrown: 1px solid brown;
+  --borderBisque: 1px solid bisque;
+  --borderKhaki: 1px solid khaki;
+  --borderGray: 1px solid gray;
 
   /* box shadow*/
-  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-1: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
@@ -535,12 +535,14 @@ CONTACT PAGE
   }
 }
 
+/* begin */
+
 body {
-  background-color: rgb(32, 106, 106);
+  background-color: var(--primary-700);
 }
 
 .container {
-  background-color: rgb(141, 141, 82);
+  background-color: var(--primary-300);
   padding: 2rem;
   align-items: center;
   display: flex;
@@ -594,5 +596,39 @@ select {
 .btn {
   margin: 5px 0;
   padding: 10px;
-  background-color: var(--primary-500);
+  background-color: var(--primary-900);
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  
 }
+
+.btn:hover{
+  transition: all .3s;
+}
+
+.error{
+  color: blue;
+  display: none;
+}
+
+.result{
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.result > * {
+  background-color: var(--grey-500);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.total{
+  color: black
+}
+
+
